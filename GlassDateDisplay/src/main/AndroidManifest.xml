@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.recursivepenguin.glassdatedisplay"
     android:versionCode="1"
-    android:versionName="1.0">
+    android:versionName="1.0"
+    android:installLocation="internalOnly">
 
     <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
 
@@ -22,9 +23,12 @@
 
         <service android:name=".DateDisplayService"/>
 
-        <receiver android:name=".BootReciever " android:enabled="true" android:exported="false">
+        <receiver android:name=".BootReciever"
+            android:enabled="true"
+            android:exported="false"
+            android:label="BootListener">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 

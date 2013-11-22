@@ -11,5 +11,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         startService(new Intent(this, DateDisplayService.class));
+
+        finish();
     }
 }
